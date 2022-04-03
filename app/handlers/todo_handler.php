@@ -8,8 +8,8 @@ if (isset($_POST['action'])) {
         case 'done':
             change_status('done');
             break;
-        case 'undone':
-            change_status('undone');
+        case 'un-done':
+            change_status('un-done');
             break;
         case 'delete':
             delete_todo();
@@ -60,7 +60,7 @@ function change_status($status)
 
     if ($status === "done") {
         $update = mysqli_query($mysqli, sprintf("UPDATE todos SET status='%s', done_at='%s', updated_at='%s' WHERE id='%s'", 1, date('Y-m-d H:i:s'), date('Y-m-d H:i:s'), $id));
-    } else if ($status === "undone") {
+    } else if ($status === "un-done") {
         $update = mysqli_query($mysqli, sprintf("UPDATE todos SET status='%s', updated_at='%s' WHERE id='%s'", 0, date('Y-m-d H:i:s'), $id));
     }
 

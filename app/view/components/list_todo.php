@@ -12,10 +12,10 @@ if (mysqli_num_rows($data['todos']) !== 0 && !is_edit_mode()):
 	            <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
 	                <button type="submit" class="btn btn-<?=$row->status ? 'secondary' : 'success'?> btn-sm">
 	                    <i class="bi bi-<?=$row->status ? 'x-lg' : 'check-circle'?>"></i>
-	                    <?=$row->status ? 'Undone' : 'Done'?>
+	                    <?=$row->status ? 'Un-done' : 'Done'?>
 	                </button>
 	                <input type="hidden" name="id" value="<?=$row->id?>">
-	                <input type="hidden" name="action" value="<?=$row->status ? 'undone' : 'done'?>">
+	                <input type="hidden" name="action" value="<?=$row->status ? 'un-done' : 'done'?>">
 	            </form>
 	            <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
     	            <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
