@@ -2,7 +2,7 @@
 
 function view($view, $data = [])
 {
-    $path = './app/view';
+    $path = './app/views';
 
     $data = $data;
 
