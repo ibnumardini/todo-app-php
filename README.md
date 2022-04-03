@@ -2,7 +2,7 @@
 
 a simple todo app, built with bootstrap, php native, mysql.
 
-<img width="500" src="./preview-app.png?raw=true" alt="My Todo-app"></img>
+<img width="600" src="./preview-app.png?raw=true" alt="My Todo-app"></img>
 
 ## Cooking 🍳
 
