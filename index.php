@@ -15,7 +15,7 @@ include_once './app/handlers/todo_handler.php';
                 <div class="card-title fw-bold fs-3">
                     Todo-App
                 </div>
-                <?php component('form_todo.php', ['todo' => get_todo()])?>
+                <?php component('form_todo.php', ['todo' => is_edit_mode() ? get_todo() : []])?>
             </div>
         </div>
         <?php component('list_todo.php', ['todos' => todos()])?>
